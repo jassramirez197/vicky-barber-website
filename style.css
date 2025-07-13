@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:sans-serif;
+    line-height: 1.6;
+    background-color: #fdfdfd;
+    color: #222;
+    padding: 1rem;
+}
+
+#hero {
+    background: url(assets/retro-barber-logo.jpg) no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+    position: relative;
+}
+
+#hero::before {
+    content: "";
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    inset: 0;
+    z-index:1;
+}
+
+#hero * {
+    position: relative;
+    z-index: 2;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.subtext {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+#hero button {
+    padding: 0.75rem 1.5rem;
+    background-color: #000;
+    color : #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#hero button:hover {
+    background-color: #444
+}
+
+#gallery {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#about-services {
+    padding: 2rem 1rem;
+    background-color: #f3f3f3;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+}
+
+#about-service h2, #about-services h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#about-services ul {
+    list-style: disc;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+#about-services p {
+    margin-bottom:1rem;
+}
+
+#info {
+    padding: 2rem 1rem;
+}
+
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.payment, .booking {
+    flex: 1 1 300px;
+}
+
+.payment ul, .booking ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+.payment img {
+    width: 100px;
+    margin-right: 0.5rem;
+}
+
+.calendar-embed {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: #eee;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 1rem;
+    color: #777;
+}
+
+@media (max-width: 600px) {
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+    .info-container {
+        flex-direction: column;
+    }
+    #hero {
+        padding: 3rem 1rem;
+    }
+}
